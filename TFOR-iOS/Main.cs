@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace TFOR_iOS
+namespace TFOR_IOS
 {
     public class Application
     {
