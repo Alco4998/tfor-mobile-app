@@ -15,6 +15,15 @@ namespace TFOR_Android
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+
+            // UI controls from layout
+            Button stationPhotosButton = FindViewById<Button>(Resource.Id.StationPhotosButton);
+
+            stationPhotosButton.Click += delegate
+            {
+                StartActivity(typeof(StationPhotosActivity));
+            };
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
