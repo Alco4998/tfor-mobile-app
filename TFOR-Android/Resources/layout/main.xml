@@ -9,10 +9,10 @@
     android:minHeight="25px"
     android:orientation="vertical">
     <Button
-       android:text="@string/stationPhotos"
+       android:text="@string/stations"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:id="@+id/StationPhotosButton" />
+       android:id="@+id/StationsButton" />
     <Button
        android:text="@string/birdSightings"
        android:layout_width="match_parent"

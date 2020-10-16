@@ -12,24 +12,20 @@ namespace TFOR_Android
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+
+
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.main);
 
             // UI controls from layout
-            Button stationPhotosButton = FindViewById<Button>(Resource.Id.StationPhotosButton);
+            Button stationsButton = FindViewById<Button>(Resource.Id.StationsButton);
 
-            stationPhotosButton.Click += delegate
+            stationsButton.Click += delegate
             {
-                StartActivity(typeof(StationPhotosActivity));
+                StartActivity(typeof(StationsActivity));
             };
 
         }
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
     }
 }

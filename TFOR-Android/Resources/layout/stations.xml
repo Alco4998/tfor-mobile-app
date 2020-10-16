@@ -25,7 +25,9 @@
     <Button
         android:text="DUMBARTON"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/StationPhotosButton"
+    />
     <Button
         android:text="MILLARDS POOL"
         android:layout_width="match_parent"

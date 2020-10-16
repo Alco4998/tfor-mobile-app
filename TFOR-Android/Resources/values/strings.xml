@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">TFOR_Android</string>
     <string name="action_settings">Settings</string>
-
-    // MainActivity Buttons
-    <string name="stationPhotos">Photos</string>
+    <string name="stations">Photos</string>
     <string name="birdSightings">Bird Sightings</string>
     <string name="riverSurvey">River Survey</string>
 </resources>
