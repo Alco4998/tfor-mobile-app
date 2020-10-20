@@ -11,8 +11,46 @@ using UIKit;
 
 namespace TFOR_IOS
 {
-    [Register("ViewController")]
+    [Register ("ViewController")]
     partial class ViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton BirdSButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView MainMenu { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton MSButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton SurveyButton { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (BirdSButton != null) {
+                BirdSButton.Dispose ();
+                BirdSButton = null;
+            }
+
+            if (MainMenu != null) {
+                MainMenu.Dispose ();
+                MainMenu = null;
+            }
+
+            if (MSButton != null) {
+                MSButton.Dispose ();
+                MSButton = null;
+            }
+
+            if (SurveyButton != null) {
+                SurveyButton.Dispose ();
+                SurveyButton = null;
+            }
+        }
     }
 }

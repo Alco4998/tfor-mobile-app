@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{21966E73-1128-49C4-9847-80BA47A2A7AF}</ProjectGuid>
+    <ProjectGuid>{C2664C7D-9799-4D5F-B4AB-6AB184C6317D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>TFOR_IOS.UITests</RootNamespace>
     <AssemblyName>TFOR_IOS.UITests</AssemblyName>
