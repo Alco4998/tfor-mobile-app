@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9860">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,38 +16,54 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="197">
-                                <rect key="frame" x="16" y="272" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1089">
+                                <rect key="frame" x="20" y="483" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="216"/>
+                                    <constraint firstAttribute="height" constant="50" id="AOq-M7-HEu"/>
+                                </constraints>
+                                <state key="normal" title="Survey"/>
+                                <connections>
+                                    <segue destination="8866" kind="show" identifier="SurveySegue" id="9032"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1358">
+                                <rect key="frame" x="20" y="423" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="B2G-zC-I3d"/>
+                                </constraints>
+                                <state key="normal" title="Bird Sightings"/>
+                                <connections>
+                                    <segue destination="11114" kind="show" identifier="BirdSegue" id="11196"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="197">
+                                <rect key="frame" x="20" y="363" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fVb-CP-ajd"/>
                                 </constraints>
                                 <state key="normal" title="Monitoring Station"/>
                                 <connections>
                                     <segue destination="10566" kind="show" identifier="MonitorSegue" id="10639"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1089">
-                                <rect key="frame" x="16" y="406" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Survey"/>
-                                <connections>
-                                    <segue destination="8866" kind="show" identifier="SurveySegue" id="9032"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1358">
-                                <rect key="frame" x="16" y="339" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Bird Sightings"/>
-                                <connections>
-                                    <segue destination="11114" kind="show" identifier="BirdSegue" id="11196"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1089" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="A2v-HF-nhs"/>
+                            <constraint firstItem="197" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="ELm-LO-b8y"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1089" secondAttribute="bottom" constant="50" id="GIx-0E-1ek"/>
+                            <constraint firstAttribute="trailing" secondItem="1089" secondAttribute="trailing" constant="20" symbolic="YES" id="IQo-Te-7ER"/>
+                            <constraint firstItem="1358" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="RMb-A0-03X"/>
+                            <constraint firstItem="1089" firstAttribute="top" secondItem="1358" secondAttribute="bottom" constant="10" id="U7L-jX-abY"/>
+                            <constraint firstItem="1358" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V09-NN-O9L"/>
+                            <constraint firstItem="197" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="Yoz-tu-5hv"/>
+                            <constraint firstItem="1358" firstAttribute="top" secondItem="197" secondAttribute="bottom" constant="10" id="iZS-sr-Xmr"/>
+                            <constraint firstAttribute="trailing" secondItem="197" secondAttribute="trailing" constant="20" symbolic="YES" id="rne-Eu-mhZ"/>
+                            <constraint firstAttribute="trailing" secondItem="1358" secondAttribute="trailing" constant="20" symbolic="YES" id="whX-UC-GrR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Main Menu" id="10111"/>
                     <connections>
@@ -60,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="511" y="0.0"/>
+            <point key="canvasLocation" x="510.14492753623193" y="0.0"/>
         </scene>
         <!--Survey Screen-->
         <scene sceneID="8865">
@@ -71,81 +86,109 @@
                         <viewControllerLayoutGuide type="bottom" id="8864"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8867">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" id="7tK-eD-H2l">
-                                <rect key="frame" x="0.0" y="94" width="375" height="41"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tK-eD-H2l">
+                                <rect key="frame" x="0.0" y="127" width="414" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="xo7-n2-Zb7" userLabel="CommentsText">
-                                <rect key="frame" x="0.0" y="439" width="375" height="152"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xo7-n2-Zb7" userLabel="CommentsText">
+                                <rect key="frame" x="20" y="472" width="374" height="152"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="fKW-uJ-fU0" userLabel="VegetationButton">
-                                <rect key="frame" x="0.0" y="235" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKW-uJ-fU0" userLabel="VegetationButton">
+                                <rect key="frame" x="20" y="268" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="82t-aw-Fla"/>
+                                </constraints>
                                 <state key="normal" title="Vegetation"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dHw-eV-baR" userLabel="WildlifeButton">
-                                <rect key="frame" x="0.0" y="303" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHw-eV-baR" userLabel="WildlifeButton">
+                                <rect key="frame" x="20" y="336" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="eyQ-L3-d9L"/>
+                                </constraints>
                                 <state key="normal" title="Wildlife"/>
                                 <connections>
                                     <segue destination="FNi-WF-MWh" kind="show" id="j21-wk-A2W"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vvP-8u-Lh5" userLabel="RiverButton">
-                                <rect key="frame" x="0.0" y="371" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvP-8u-Lh5" userLabel="RiverButton">
+                                <rect key="frame" x="20" y="404" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="tOj-oI-cD5"/>
+                                </constraints>
                                 <state key="normal" title="River"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c1z-H5-gr9">
-                                <rect key="frame" x="0.0" y="146" width="375" height="32"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1z-H5-gr9">
+                                <rect key="frame" x="0.0" y="179" width="414" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="QFK-0D-fVx">
-                                <rect key="frame" x="0.0" y="186" width="375" height="41"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QFK-0D-fVx">
+                                <rect key="frame" x="20" y="219" width="374" height="41"/>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Site" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sok-4P-Ukc">
-                                <rect key="frame" x="0.0" y="54" width="375" height="32"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Site" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sok-4P-Ukc">
+                                <rect key="frame" x="0.0" y="87" width="414" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="SiteLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="BA7-vQ-gan" userLabel="SurveySubmitButton">
-                                <rect key="frame" x="0.0" y="599" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA7-vQ-gan" userLabel="SurveySubmitButton">
+                                <rect key="frame" x="0.0" y="804" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="647-kt-JbB"/>
+                                </constraints>
                                 <state key="normal" title="Submit"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dHw-eV-baR" firstAttribute="centerX" secondItem="8867" secondAttribute="centerX" id="aRR-9T-1eL"/>
-                            <constraint firstItem="fKW-uJ-fU0" firstAttribute="leading" secondItem="8867" secondAttribute="leading" constant="16" id="cgs-25-c0b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dHw-eV-baR" secondAttribute="trailing" id="1yw-rE-snN"/>
+                            <constraint firstItem="8864" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BA7-vQ-gan" secondAttribute="bottom" constant="8" symbolic="YES" id="2q5-lA-6T5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vvP-8u-Lh5" secondAttribute="trailing" id="3Bj-qW-xiR"/>
+                            <constraint firstItem="BA7-vQ-gan" firstAttribute="top" secondItem="xo7-n2-Zb7" secondAttribute="bottom" constant="8" symbolic="YES" id="9Vf-3N-ITf"/>
+                            <constraint firstItem="BA7-vQ-gan" firstAttribute="leading" secondItem="8867" secondAttribute="leading" id="CAN-cz-AbW"/>
+                            <constraint firstItem="vvP-8u-Lh5" firstAttribute="leading" secondItem="8867" secondAttribute="leadingMargin" id="CtB-Jd-aGi"/>
+                            <constraint firstItem="xo7-n2-Zb7" firstAttribute="top" secondItem="vvP-8u-Lh5" secondAttribute="bottom" constant="8" symbolic="YES" id="HaD-XC-9ag"/>
+                            <constraint firstItem="QFK-0D-fVx" firstAttribute="leading" secondItem="8867" secondAttribute="leading" constant="20" symbolic="YES" id="OVa-IM-6hA"/>
+                            <constraint firstItem="fKW-uJ-fU0" firstAttribute="top" secondItem="QFK-0D-fVx" secondAttribute="bottom" constant="8" symbolic="YES" id="UvL-O6-GRy"/>
+                            <constraint firstItem="xo7-n2-Zb7" firstAttribute="leading" secondItem="8867" secondAttribute="leading" constant="20" symbolic="YES" id="YGb-8Y-Qc1"/>
+                            <constraint firstItem="dHw-eV-baR" firstAttribute="leading" secondItem="8867" secondAttribute="leadingMargin" id="Zyi-DZ-B3X"/>
+                            <constraint firstItem="QFK-0D-fVx" firstAttribute="top" secondItem="c1z-H5-gr9" secondAttribute="bottom" constant="8" symbolic="YES" id="cp2-Fs-YBS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fKW-uJ-fU0" secondAttribute="trailing" id="gw6-sk-OX4"/>
+                            <constraint firstAttribute="trailing" secondItem="BA7-vQ-gan" secondAttribute="trailing" id="hRB-En-edw"/>
+                            <constraint firstItem="fKW-uJ-fU0" firstAttribute="leading" secondItem="8867" secondAttribute="leadingMargin" id="iBI-Tu-yt2"/>
+                            <constraint firstItem="vvP-8u-Lh5" firstAttribute="top" secondItem="dHw-eV-baR" secondAttribute="bottom" constant="8" symbolic="YES" id="mR0-hE-1Vf"/>
+                            <constraint firstItem="xo7-n2-Zb7" firstAttribute="top" secondItem="vvP-8u-Lh5" secondAttribute="bottom" constant="8" symbolic="YES" id="rok-YL-iDb"/>
+                            <constraint firstAttribute="trailing" secondItem="xo7-n2-Zb7" secondAttribute="trailing" constant="20" symbolic="YES" id="uxv-cX-dmX"/>
+                            <constraint firstItem="dHw-eV-baR" firstAttribute="top" secondItem="fKW-uJ-fU0" secondAttribute="bottom" constant="8" symbolic="YES" id="xvy-1k-Vr6"/>
+                            <constraint firstAttribute="trailing" secondItem="QFK-0D-fVx" secondAttribute="trailing" constant="20" symbolic="YES" id="zza-NN-qo2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SiteLabel" destination="sok-4P-Ukc" id="name-outlet-sok-4P-Ukc"/>
+                        <outlet property="SitePicker" destination="7tK-eD-H2l" id="name-outlet-7tK-eD-H2l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8868" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1272.8" y="-0.44977511244377816"/>
+            <point key="canvasLocation" x="1272.4637681159422" y="-0.6696428571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9859">
             <objects>
                 <navigationController id="9860" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9862">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -165,166 +208,183 @@
                         <viewControllerLayoutGuide type="bottom" id="10569"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="10567">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" id="2Ed-Iq-0Ev" userLabel="MonitorSitePickerView">
-                                <rect key="frame" x="0.0" y="81" width="375" height="73"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" id="2Ed-Iq-0Ev" userLabel="MonitorSitePickerView">
+                                <rect key="frame" x="0.0" y="128" width="414" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Goq-Sp-Sf7" userLabel="MonitorSubmitButton">
-                                <rect key="frame" x="0.0" y="587" width="375" height="59.999999999999972"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Goq-Sp-Sf7" userLabel="MonitorSubmitButton">
+                                <rect key="frame" x="20" y="637" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" id="nA7-2C-dWU" userLabel="MonitorCollectionView">
-                                <rect key="frame" x="0.0" y="313" width="375" height="266"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8GZ-5h-pP5">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iNc-yR-bPl">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FGu-7o-OA6">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5Aj-WP-l5S">
-                                        <rect key="frame" x="215" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="q3l-3E-99n">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0f1-Sy-3Z6">
-                                        <rect key="frame" x="0.0" y="138" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ssv-Sr-3zB">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UAI-NZ-ZPY">
-                                        <rect key="frame" x="215" y="138" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yGM-do-Wuf">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k8l-lH-Cy9" userLabel="BirdEndDate">
-                                <rect key="frame" x="0.0" y="52" width="375" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k8l-lH-Cy9" userLabel="BirdEndDate">
+                                <rect key="frame" x="0.0" y="99" width="414" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="udY-kl-rTz" userLabel="MonitorDatePicker">
-                                <rect key="frame" x="0.0" y="204" width="375" height="86"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="udY-kl-rTz" userLabel="MonitorDatePicker">
+                                <rect key="frame" x="0.0" y="251" width="414" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NKh-Hs-Zlx" userLabel="BirdEndDate">
-                                <rect key="frame" x="0.0" y="175" width="375" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NKh-Hs-Zlx" userLabel="BirdEndDate">
+                                <rect key="frame" x="0.0" y="222" width="414" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Ed-Iq-0Ev" firstAttribute="centerX" secondItem="k8l-lH-Cy9" secondAttribute="centerX" id="11843"/>
+                            <constraint firstItem="udY-kl-rTz" firstAttribute="centerX" secondItem="k8l-lH-Cy9" secondAttribute="centerX" id="11844"/>
+                            <constraint firstItem="NKh-Hs-Zlx" firstAttribute="centerX" secondItem="k8l-lH-Cy9" secondAttribute="centerX" id="11845"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10570" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2688.8000000000002" y="-0.44977511244377816"/>
+            <point key="canvasLocation" x="2688.8000000000002" y="-0.44977509999999998"/>
         </scene>
         <!--Bird Screen-->
         <scene sceneID="11113">
             <objects>
-                <viewController title="Bird Screen" id="11114" sceneMemberID="viewController">
+                <viewController title="Bird Screen" id="11114" customClass="BirdScreenController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="11116"/>
                         <viewControllerLayoutGuide type="bottom" id="11117"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="11115">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FVC-iv-VEt" userLabel="BirdStartDate">
-                                <rect key="frame" x="7" y="52" width="148" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVC-iv-VEt" userLabel="BirdStartDate">
+                                <rect key="frame" x="20" y="96" width="187" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="hWS-7L-pKz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" id="qbN-y2-wwt" userLabel="BirdStartTimePicker">
-                                <rect key="frame" x="7" y="81" width="148" height="41"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="qbN-y2-wwt" userLabel="BirdStartTimePicker">
+                                <rect key="frame" x="20" y="126" width="187" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="4XZ-O8-wTq"/>
+                                </constraints>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" id="3Q8-0h-tsT" userLabel="BirdEndTimePicker">
-                                <rect key="frame" x="194" y="81" width="148" height="41"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Q8-0h-tsT" userLabel="BirdEndTimePicker">
+                                <rect key="frame" x="207" y="126" width="187" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="usu-dj-Q2a"/>
+                                </constraints>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dNx-y9-9Eg" userLabel="BirdEndDate">
-                                <rect key="frame" x="194" y="52" width="148" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNx-y9-9Eg" userLabel="BirdEndDate">
+                                <rect key="frame" x="207" y="96" width="187" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" id="LuU-4j-dfk" userLabel="BirdDatePicker">
-                                <rect key="frame" x="-1" y="130" width="375" height="41"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
-                            <pickerView contentMode="scaleToFill" id="NKM-6H-YWs" userLabel="BirdSitePickerView">
-                                <rect key="frame" x="-1" y="179" width="375" height="55"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKM-6H-YWs" userLabel="BirdSitePickerView">
+                                <rect key="frame" x="20" y="291" width="374" height="75"/>
+                                <accessibility key="accessibilityConfiguration" identifier="BASitePicker"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="C8a-Ai-xPB"/>
+                                </constraints>
                             </pickerView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JlR-pG-yfg" userLabel="TableView">
-                                <rect key="frame" x="-1" y="242" width="375" height="156"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-pG-yfg" userLabel="TableView">
+                                <rect key="frame" x="20" y="374" width="374" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1iA-LG-vRg"/>
+                                </constraints>
                             </tableView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="xNk-NI-HsA" userLabel="CommentsText">
-                                <rect key="frame" x="-1" y="455" width="375" height="128"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EZ6-2G-5hG" userLabel="AddBirdButton">
-                                <rect key="frame" x="-1" y="406" width="375" height="41"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ6-2G-5hG" userLabel="AddBirdButton">
+                                <rect key="frame" x="20" y="482" width="374" height="30"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fpr-lI-I4X"/>
+                                </constraints>
                                 <state key="normal" image="plus" catalog="system"/>
                                 <connections>
                                     <segue destination="0n0-P7-6k4" kind="show" id="q7v-gG-cex"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="WbI-bN-HQh" userLabel="BirdSubmitButton">
-                                <rect key="frame" x="-1" y="587" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="LuU-4j-dfk" userLabel="BirdDatePicker">
+                                <rect key="frame" x="20" y="209" width="374" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="U3C-7r-846"/>
+                                </constraints>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbI-bN-HQh" userLabel="BirdSubmitButton">
+                                <rect key="frame" x="20" y="804" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mRC-RW-WCs"/>
+                                </constraints>
                                 <state key="normal" title="Submit"/>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xNk-NI-HsA" userLabel="CommentsText">
+                                <rect key="frame" x="20" y="520" width="374" height="276"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="kZZ-pD-XGS"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qbN-y2-wwt" firstAttribute="top" secondItem="FVC-iv-VEt" secondAttribute="bottom" constant="9" id="2uQ-l2-var"/>
+                            <constraint firstItem="FVC-iv-VEt" firstAttribute="leading" secondItem="11115" secondAttribute="leadingMargin" id="3Db-56-ebo"/>
+                            <constraint firstItem="NKM-6H-YWs" firstAttribute="top" secondItem="LuU-4j-dfk" secondAttribute="bottom" constant="7" id="3Gf-7Q-aff"/>
+                            <constraint firstItem="EZ6-2G-5hG" firstAttribute="trailing" secondItem="11115" secondAttribute="trailingMargin" id="5H8-5b-jk1"/>
+                            <constraint firstItem="11117" firstAttribute="top" secondItem="WbI-bN-HQh" secondAttribute="bottom" constant="8" symbolic="YES" id="82c-EA-uB3"/>
+                            <constraint firstItem="3Q8-0h-tsT" firstAttribute="top" secondItem="dNx-y9-9Eg" secondAttribute="bottom" constant="9" id="94r-op-iBh"/>
+                            <constraint firstItem="xNk-NI-HsA" firstAttribute="leading" secondItem="11115" secondAttribute="leadingMargin" id="9l6-bU-k8E"/>
+                            <constraint firstItem="FVC-iv-VEt" firstAttribute="top" secondItem="11116" secondAttribute="bottom" constant="8" symbolic="YES" id="CrF-UA-5GG"/>
+                            <constraint firstItem="EZ6-2G-5hG" firstAttribute="top" secondItem="JlR-pG-yfg" secondAttribute="bottom" constant="8" symbolic="YES" id="DEs-q2-lV2"/>
+                            <constraint firstItem="dNx-y9-9Eg" firstAttribute="leading" secondItem="FVC-iv-VEt" secondAttribute="trailing" id="ETV-vj-0Fn"/>
+                            <constraint firstItem="NKM-6H-YWs" firstAttribute="leading" secondItem="11115" secondAttribute="leadingMargin" id="Gao-Fi-6Z7"/>
+                            <constraint firstItem="JlR-pG-yfg" firstAttribute="top" secondItem="NKM-6H-YWs" secondAttribute="bottom" constant="8" symbolic="YES" id="HsU-sM-Vqz"/>
+                            <constraint firstItem="qbN-y2-wwt" firstAttribute="top" secondItem="FVC-iv-VEt" secondAttribute="bottom" constant="9" id="IGj-iv-Cni"/>
+                            <constraint firstItem="3Q8-0h-tsT" firstAttribute="trailing" secondItem="11115" secondAttribute="trailingMargin" id="KHq-qp-hbb"/>
+                            <constraint firstItem="NKM-6H-YWs" firstAttribute="trailing" secondItem="11115" secondAttribute="trailingMargin" id="QR7-Ix-k7w"/>
+                            <constraint firstItem="WbI-bN-HQh" firstAttribute="trailing" secondItem="11115" secondAttribute="trailingMargin" id="Qc6-X4-LEh"/>
+                            <constraint firstItem="WbI-bN-HQh" firstAttribute="leading" secondItem="11115" secondAttribute="leadingMargin" id="U4b-aF-wW3"/>
+                            <constraint firstItem="LuU-4j-dfk" firstAttribute="trailing" secondItem="11115" secondAttribute="trailingMargin" id="Upa-aY-D51"/>
+                            <constraint firstItem="EZ6-2G-5hG" firstAttribute="leading" secondItem="11115" secondAttribute="leadingMargin" id="Uy2-2j-pKT"/>
+                            <constraint firstItem="3Q8-0h-tsT" firstAttribute="leading" secondItem="qbN-y2-wwt" secondAttribute="trailing" id="XAw-Bl-bl4"/>
+                            <constraint firstItem="JlR-pG-yfg" firstAttribute="leading" secondItem="11115" secondAttribute="leadingMargin" id="Z0B-c8-ahd"/>
+                            <constraint firstItem="3Q8-0h-tsT" firstAttribute="trailing" secondItem="11115" secondAttribute="trailingMargin" id="ZIq-0y-4iA"/>
+                            <constraint firstItem="dNx-y9-9Eg" firstAttribute="trailing" secondItem="11115" secondAttribute="trailingMargin" id="hj1-mA-urb"/>
+                            <constraint firstItem="dNx-y9-9Eg" firstAttribute="top" secondItem="11116" secondAttribute="bottom" constant="8" symbolic="YES" id="hny-3d-B1b"/>
+                            <constraint firstItem="WbI-bN-HQh" firstAttribute="top" secondItem="xNk-NI-HsA" secondAttribute="bottom" constant="8" symbolic="YES" id="m0j-8A-RBP"/>
+                            <constraint firstItem="LuU-4j-dfk" firstAttribute="leading" secondItem="11115" secondAttribute="leadingMargin" id="n3l-8j-oOC"/>
+                            <constraint firstItem="3Q8-0h-tsT" firstAttribute="leading" secondItem="qbN-y2-wwt" secondAttribute="trailing" id="pdv-e1-T1E"/>
+                            <constraint firstItem="xNk-NI-HsA" firstAttribute="top" secondItem="EZ6-2G-5hG" secondAttribute="bottom" constant="8" symbolic="YES" id="pja-0g-uoz"/>
+                            <constraint firstItem="qbN-y2-wwt" firstAttribute="leading" secondItem="11115" secondAttribute="leadingMargin" id="qIc-mL-PZ5"/>
+                            <constraint firstItem="xNk-NI-HsA" firstAttribute="trailing" secondItem="11115" secondAttribute="trailingMargin" id="tJw-fL-ca5"/>
+                            <constraint firstItem="JlR-pG-yfg" firstAttribute="trailing" secondItem="11115" secondAttribute="trailingMargin" id="xrH-AG-KaL"/>
+                            <constraint firstItem="LuU-4j-dfk" firstAttribute="top" secondItem="qbN-y2-wwt" secondAttribute="bottom" constant="8" symbolic="YES" id="xtU-Z4-04O"/>
+                            <constraint firstItem="dNx-y9-9Eg" firstAttribute="top" secondItem="11116" secondAttribute="bottom" constant="8" symbolic="YES" id="yrT-cq-gc6"/>
+                            <constraint firstItem="LuU-4j-dfk" firstAttribute="top" secondItem="3Q8-0h-tsT" secondAttribute="bottom" constant="8" symbolic="YES" id="zUA-uk-Dbd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="BASitePicker" destination="NKM-6H-YWs" id="name-outlet-NKM-6H-YWs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11118" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1971.0144927536232" y="0.0"/>
+            <point key="canvasLocation" x="1968.1159420289857" y="0.0"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kxZ-VU-Taa">
@@ -335,7 +395,7 @@
                         <viewControllerLayoutGuide type="bottom" id="g5B-AT-gDT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wPK-fF-HuN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -354,23 +414,23 @@
                         <viewControllerLayoutGuide type="bottom" id="izH-hK-RDR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PTs-Wc-xTx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Species" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="lDO-Gp-gd2" userLabel="BirdAddSpecies">
-                                <rect key="frame" x="16" y="97" width="343" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Species" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="lDO-Gp-gd2" userLabel="BirdAddSpecies">
+                                <rect key="frame" x="16" y="97" width="380" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Amount" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="f5a-03-PGV" userLabel="BirdAddAmount">
-                                <rect key="frame" x="16" y="177" width="343" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Amount" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="f5a-03-PGV" userLabel="BirdAddAmount">
+                                <rect key="frame" x="16" y="177" width="380" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="BKk-xg-ttt" userLabel="BirdAddSubmitButton">
-                                <rect key="frame" x="16" y="250" width="343" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="BKk-xg-ttt" userLabel="BirdAddSubmitButton">
+                                <rect key="frame" x="16" y="250" width="380" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                             </button>
@@ -381,7 +441,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSN-da-hx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1968.8" y="850.52473763118451"/>
+            <point key="canvasLocation" x="1968.8" y="850.52470000000005"/>
         </scene>
     </scenes>
     <resources>
