@@ -18,11 +18,29 @@ namespace TFOR_IOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIPickerView BASitePicker { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton SightingsAddButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView SightingTableView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (BASitePicker != null) {
                 BASitePicker.Dispose ();
                 BASitePicker = null;
+            }
+
+            if (SightingsAddButton != null) {
+                SightingsAddButton.Dispose ();
+                SightingsAddButton = null;
+            }
+
+            if (SightingTableView != null) {
+                SightingTableView.Dispose ();
+                SightingTableView = null;
             }
         }
     }

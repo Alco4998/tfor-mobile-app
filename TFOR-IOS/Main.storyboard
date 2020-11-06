@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9860">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
@@ -75,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="510.14492753623193" y="0.0"/>
+            <point key="canvasLocation" x="510.1449" y="0.0"/>
         </scene>
         <!--Survey Screen-->
         <scene sceneID="8865">
@@ -93,7 +93,7 @@
                                 <rect key="frame" x="0.0" y="127" width="414" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xo7-n2-Zb7" userLabel="CommentsText">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xo7-n2-Zb7" userLabel="CommentsText" misplaced="YES">
                                 <rect key="frame" x="20" y="472" width="374" height="152"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
@@ -101,14 +101,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKW-uJ-fU0" userLabel="VegetationButton">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKW-uJ-fU0" userLabel="VegetationButton" misplaced="YES">
                                 <rect key="frame" x="20" y="268" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="82t-aw-Fla"/>
                                 </constraints>
                                 <state key="normal" title="Vegetation"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHw-eV-baR" userLabel="WildlifeButton">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHw-eV-baR" userLabel="WildlifeButton" misplaced="YES">
                                 <rect key="frame" x="20" y="336" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="eyQ-L3-d9L"/>
@@ -118,21 +118,21 @@
                                     <segue destination="FNi-WF-MWh" kind="show" id="j21-wk-A2W"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvP-8u-Lh5" userLabel="RiverButton">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvP-8u-Lh5" userLabel="RiverButton" misplaced="YES">
                                 <rect key="frame" x="20" y="404" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="tOj-oI-cD5"/>
                                 </constraints>
                                 <state key="normal" title="River"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1z-H5-gr9">
-                                <rect key="frame" x="0.0" y="179" width="414" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1z-H5-gr9" misplaced="YES">
+                                <rect key="frame" x="0.0" y="179" width="55" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QFK-0D-fVx">
-                                <rect key="frame" x="20" y="219" width="374" height="41"/>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QFK-0D-fVx" misplaced="YES">
+                                <rect key="frame" x="20" y="219" width="374" height="216"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Site" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sok-4P-Ukc">
                                 <rect key="frame" x="0.0" y="87" width="414" height="32"/>
@@ -142,7 +142,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA7-vQ-gan" userLabel="SurveySubmitButton">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA7-vQ-gan" userLabel="SurveySubmitButton" misplaced="YES">
                                 <rect key="frame" x="0.0" y="804" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="647-kt-JbB"/>
@@ -181,14 +181,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8868" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1272.4637681159422" y="-0.6696428571428571"/>
+            <point key="canvasLocation" x="1272.464" y="-0.6696429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9859">
             <objects>
                 <navigationController id="9860" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9862">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -213,27 +213,23 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" id="2Ed-Iq-0Ev" userLabel="MonitorSitePickerView">
                                 <rect key="frame" x="0.0" y="128" width="414" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Goq-Sp-Sf7" userLabel="MonitorSubmitButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Goq-Sp-Sf7" userLabel="MonitorSubmitButton" fixedFrame="YES">
                                 <rect key="frame" x="20" y="637" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k8l-lH-Cy9" userLabel="BirdEndDate">
                                 <rect key="frame" x="0.0" y="99" width="414" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="udY-kl-rTz" userLabel="MonitorDatePicker">
                                 <rect key="frame" x="0.0" y="251" width="414" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NKh-Hs-Zlx" userLabel="BirdEndDate">
                                 <rect key="frame" x="0.0" y="222" width="414" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -249,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10570" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2688.8000000000002" y="-0.44977509999999998"/>
+            <point key="canvasLocation" x="2688.8" y="-0.4497751"/>
         </scene>
         <!--Bird Screen-->
         <scene sceneID="11113">
@@ -264,7 +260,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVC-iv-VEt" userLabel="BirdStartDate">
-                                <rect key="frame" x="20" y="96" width="187" height="21"/>
+                                <rect key="frame" x="20" y="78" width="187" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="187" id="hWS-7L-pKz"/>
                                 </constraints>
@@ -273,63 +269,74 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="qbN-y2-wwt" userLabel="BirdStartTimePicker">
-                                <rect key="frame" x="20" y="126" width="187" height="75"/>
+                                <rect key="frame" x="20" y="107.5" width="187" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="4XZ-O8-wTq"/>
                                 </constraints>
                             </datePicker>
                             <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Q8-0h-tsT" userLabel="BirdEndTimePicker">
-                                <rect key="frame" x="207" y="126" width="187" height="75"/>
+                                <rect key="frame" x="207" y="107.5" width="187" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="187" id="usu-dj-Q2a"/>
                                 </constraints>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNx-y9-9Eg" userLabel="BirdEndDate">
-                                <rect key="frame" x="207" y="96" width="187" height="21"/>
+                                <rect key="frame" x="207" y="78" width="187" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKM-6H-YWs" userLabel="BirdSitePickerView">
-                                <rect key="frame" x="20" y="291" width="374" height="75"/>
+                                <rect key="frame" x="20" y="272.5" width="374" height="75"/>
                                 <accessibility key="accessibilityConfiguration" identifier="BASitePicker"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="C8a-Ai-xPB"/>
                                 </constraints>
                             </pickerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-pG-yfg" userLabel="TableView">
-                                <rect key="frame" x="20" y="374" width="374" height="100"/>
+                                <rect key="frame" x="20" y="355.5" width="374" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="1iA-LG-vRg"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="91081">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="91081" id="91082">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue id="91581" destination="29080" kind="showDetail" identifier="AddBirdSegue"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ6-2G-5hG" userLabel="AddBirdButton">
-                                <rect key="frame" x="20" y="482" width="374" height="30"/>
+                                <rect key="frame" x="20" y="463.5" width="374" height="30"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="fpr-lI-I4X"/>
                                 </constraints>
                                 <state key="normal" image="plus" catalog="system"/>
-                                <connections>
-                                    <segue destination="0n0-P7-6k4" kind="show" id="q7v-gG-cex"/>
-                                </connections>
+                                <accessibility key="accessibilityConfiguration" identifier="SightingsAddButton"/>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="LuU-4j-dfk" userLabel="BirdDatePicker">
-                                <rect key="frame" x="20" y="209" width="374" height="75"/>
+                                <rect key="frame" x="20" y="190.5" width="374" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="U3C-7r-846"/>
                                 </constraints>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbI-bN-HQh" userLabel="BirdSubmitButton">
-                                <rect key="frame" x="20" y="804" width="374" height="50"/>
+                                <rect key="frame" x="20" y="838" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="mRC-RW-WCs"/>
                                 </constraints>
                                 <state key="normal" title="Submit"/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xNk-NI-HsA" userLabel="CommentsText">
-                                <rect key="frame" x="20" y="520" width="374" height="276"/>
+                                <rect key="frame" x="20" y="501.5" width="374" height="328.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="kZZ-pD-XGS"/>
@@ -380,11 +387,13 @@
                     </view>
                     <connections>
                         <outlet property="BASitePicker" destination="NKM-6H-YWs" id="name-outlet-NKM-6H-YWs"/>
+                        <outlet property="SightingTableView" destination="JlR-pG-yfg" id="name-outlet-JlR-pG-yfg"/>
+                        <outlet property="SightingsAddButton" destination="EZ6-2G-5hG" id="name-outlet-EZ6-2G-5hG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11118" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1968.1159420289857" y="0.0"/>
+            <point key="canvasLocation" x="1968.116" y="0.0"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kxZ-VU-Taa">
@@ -403,57 +412,146 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOK-8y-Ngb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="851"/>
+            <point key="canvasLocation" x="1272" y="990"/>
         </scene>
         <!--Add Bird Record-->
-        <scene sceneID="Ta6-wZ-QNm">
+        <scene sceneID="29079">
             <objects>
-                <viewController id="0n0-P7-6k4" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="j5R-a9-op9"/>
-                        <viewControllerLayoutGuide type="bottom" id="izH-hK-RDR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="PTs-Wc-xTx">
+                <tableViewController id="29080" sceneMemberID="viewController" storyboardIdentifier="detail" customClass="SightingDetailController" title="Add Bird">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="29081">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Species" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="lDO-Gp-gd2" userLabel="BirdAddSpecies">
-                                <rect key="frame" x="16" y="97" width="380" height="34"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Amount" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="f5a-03-PGV" userLabel="BirdAddAmount">
-                                <rect key="frame" x="16" y="177" width="380" height="34"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="BKk-xg-ttt" userLabel="BirdAddSubmitButton">
-                                <rect key="frame" x="16" y="250" width="380" height="60"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Add Bird Record" id="2N0-Q0-TH1"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HSN-da-hx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="29080" id="29082"/>
+                            <outlet property="delegate" destination="29080" id="29083"/>
+                        </connections>
+                        <sections>
+                            <tableViewSection headerTitle="Section" id="31263">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="31264">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="31264" id="31265">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="37415" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="20" y="11" width="62" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="43009" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="97" y="7" width="297" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="38928" firstItem="37415" firstAttribute="leading" secondItem="31265" secondAttribute="leadingMargin"/>
+                                                <constraint id="39361" firstAttribute="bottomMargin" secondItem="37415" secondAttribute="bottom"/>
+                                                <constraint id="39580" firstItem="37415" firstAttribute="top" secondItem="31265" secondAttribute="topMargin"/>
+                                                <constraint id="40021" firstAttribute="trailingMargin" secondItem="37415" secondAttribute="trailing" constant="312"/>
+                                                <constraint id="43257" firstAttribute="trailingMargin" secondItem="43009" secondAttribute="trailing"/>
+                                                <constraint id="43711" firstItem="43009" firstAttribute="top" secondItem="31265" secondAttribute="topMargin" constant="-4"/>
+                                                <constraint id="43941" firstAttribute="bottomMargin" secondItem="43009" secondAttribute="bottom" constant="-4"/>
+                                                <constraint id="44402" firstItem="43009" firstAttribute="leading" secondItem="37415" secondAttribute="trailing" constant="15"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="31266">
+                                        <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="31266" id="31267">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="33329" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="20" y="11" width="62" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="44868" translatesAutoresizingMaskIntoConstraints="NO" text="Text">
+                                                    <rect key="frame" x="97" y="7" width="297" height="30"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="33552" firstItem="33329" firstAttribute="leading" secondItem="31267" secondAttribute="leadingMargin"/>
+                                                <constraint id="33973" firstItem="33329" firstAttribute="top" secondItem="31267" secondAttribute="topMargin"/>
+                                                <constraint id="34186" firstAttribute="bottomMargin" secondItem="33329" secondAttribute="bottom"/>
+                                                <constraint id="42560" firstAttribute="trailingMargin" secondItem="33329" secondAttribute="trailing" constant="312"/>
+                                                <constraint id="45124" firstItem="44868" firstAttribute="top" secondItem="31267" secondAttribute="topMargin" constant="-4"/>
+                                                <constraint id="45360" firstAttribute="bottomMargin" secondItem="44868" secondAttribute="bottom" constant="-4"/>
+                                                <constraint id="45834" firstAttribute="trailingMargin" secondItem="44868" secondAttribute="trailing"/>
+                                                <constraint id="46311" firstItem="44868" firstAttribute="leading" secondItem="33329" secondAttribute="trailing" constant="15"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Section" id="51289">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="51290">
+                                        <rect key="frame" x="0.0" y="144" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51290" id="51291">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="51768" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="20" y="7" width="374" height="30"/>
+                                                    <state key="normal" title="Save"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="52256" firstItem="51768" firstAttribute="top" secondItem="51291" secondAttribute="topMargin" constant="-4"/>
+                                                <constraint id="52495" firstItem="51768" firstAttribute="leading" secondItem="51291" secondAttribute="leadingMargin"/>
+                                                <constraint id="52736" firstAttribute="bottomMargin" secondItem="51768" secondAttribute="bottom" constant="-4"/>
+                                                <constraint id="52979" firstAttribute="trailingMargin" secondItem="51768" secondAttribute="trailing"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="51292">
+                                        <rect key="frame" x="0.0" y="188" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51292" id="51293">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="52005" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="20" y="7" width="374" height="30"/>
+                                                    <state key="normal" title="Delete"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="53482" firstItem="52005" firstAttribute="top" secondItem="51293" secondAttribute="topMargin" constant="-4"/>
+                                                <constraint id="53729" firstAttribute="bottomMargin" secondItem="52005" secondAttribute="bottom" constant="-4"/>
+                                                <constraint id="53978" firstItem="52005" firstAttribute="leading" secondItem="51293" secondAttribute="leadingMargin"/>
+                                                <constraint id="54479" firstAttribute="trailingMargin" secondItem="52005" secondAttribute="trailing"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
+                    <connections>
+                        <outlet property="SpeciesText" destination="43009" id="name-outlet-43009"/>
+                        <outlet property="AmountText" destination="44868" id="name-outlet-44868"/>
+                        <outlet property="SaveButton" destination="51768" id="name-outlet-51768"/>
+                        <outlet property="DeleteButton" destination="52005" id="name-outlet-52005"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29086" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1968.8" y="850.52470000000005"/>
+            <point key="canvasLocation" x="1967" y="980"/>
         </scene>
     </scenes>
     <resources>
-        <image name="plus" catalog="system" width="128" height="113"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="plus" catalog="system"/>
     </resources>
 </document>

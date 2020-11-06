@@ -88,7 +88,7 @@ namespace TFOR_IOS
                             {
                                 teststring += string.Format("{0}\n", site.Name);
                             }
-
+                            
                             CreateAlert("Object", teststring);
                         }
                     }
@@ -104,13 +104,10 @@ namespace TFOR_IOS
                 Title = "Title";
             }
 
-            //Create Alert
             var ViewController = UIAlertController.Create(Title, Content, UIAlertControllerStyle.Alert);
 
-            //Add Action
             ViewController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 
-            // Present Alert
             PresentViewController(ViewController, true, null);
         }
 
