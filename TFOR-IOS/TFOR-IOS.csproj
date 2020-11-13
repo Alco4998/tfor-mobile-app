@@ -130,6 +130,10 @@
     <None Include="Entitlements.plist" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
+=======
+    <Compile Include="BirdSurvey.cs" />
+>>>>>>> Stashed changes
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="SceneDelegate.cs" />

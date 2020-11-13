@@ -16,7 +16,27 @@ namespace TFOR_IOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextView BACommentText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIDatePicker BADatePicker { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIDatePicker BAEndTimePicker { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIPickerView BASitePicker { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIDatePicker BAStartTImePicker { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton BASubmitButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -26,11 +46,40 @@ namespace TFOR_IOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView SightingTableView { get; set; }
 
+        [Action ("BASubmitButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BASubmitButton_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
+            if (BACommentText != null) {
+                BACommentText.Dispose ();
+                BACommentText = null;
+            }
+
+            if (BADatePicker != null) {
+                BADatePicker.Dispose ();
+                BADatePicker = null;
+            }
+
+            if (BAEndTimePicker != null) {
+                BAEndTimePicker.Dispose ();
+                BAEndTimePicker = null;
+            }
+
             if (BASitePicker != null) {
                 BASitePicker.Dispose ();
                 BASitePicker = null;
+            }
+
+            if (BAStartTImePicker != null) {
+                BAStartTImePicker.Dispose ();
+                BAStartTImePicker = null;
+            }
+
+            if (BASubmitButton != null) {
+                BASubmitButton.Dispose ();
+                BASubmitButton = null;
             }
 
             if (SightingsAddButton != null) {

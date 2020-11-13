@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using HomeKit;
 using System;
 using System.Collections.Generic;
 using UIKit;
@@ -7,12 +8,27 @@ namespace TFOR_IOS
 {
     public class SightingsTableSource : UITableViewSource
     {
-        List<Sighting> tableitems;
+        List<Sighting> tableitems = new List<Sighting>();
+        private BirdScreenController Delegate;
         string cellidentifier = "SigthingCell";
 
-        public SightingsTableSource(List<Sighting> items)
+        public SightingsTableSource(List<Sighting> items, BirdScreenController b)
         {
             tableitems = items;
+            Delegate = b;
+        }
+
+        public override void CommitEditingStyle(UITableView tableView, UITableViewCellEditingStyle editingStyle, NSIndexPath indexPath)
+        {
+            switch (editingStyle)
+            {
+                case UITableViewCellEditingStyle.Delete:
+                    break;
+
+                case UITableViewCellEditingStyle.Insert:
+                    
+                    break;
+            }
         }
 
         public override nint RowsInSection(UITableView tableview, nint section)
@@ -23,8 +39,14 @@ namespace TFOR_IOS
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             var cell = tableView.DequeueReusableCell(cellidentifier);
+            string item = tableitems[indexPath.Row].ToString();
 
-            cell.TextLabel.Text = tableitems[indexPath.Row].Name;
+            if (cell == null)
+            {
+                cell = new UITableViewCell(UITableViewCellStyle.Default, cellidentifier);
+            }
+
+            cell.TextLabel.Text = item;
 
             return cell;
         }
@@ -32,6 +54,35 @@ namespace TFOR_IOS
         public Sighting GetItem(int id)
         {
             return tableitems[id];
+        }
+
+        public override bool CanEditRow(UITableView tableView, NSIndexPath indexPath)
+        {
+            return true;
+        }
+
+        public override UITableViewRowAction[] EditActionsForRow(UITableView tableView, NSIndexPath indexPath)
+        {
+            UITableViewRowAction editButton = UITableViewRowAction.Create(
+                UITableViewRowActionStyle.Normal,
+                "Edit",
+                delegate
+                {
+                    Delegate.EditSighting(tableitems[indexPath.Row]);
+                }
+                );
+
+            UITableViewRowAction deleteButton = UITableViewRowAction.Create(
+                UITableViewRowActionStyle.Destructive,
+                "Delete",
+                delegate
+                {
+                    tableitems.Remove(tableitems[indexPath.Row]);
+                    tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
+                }
+            );
+
+            return new UITableViewRowAction[] { editButton, deleteButton };
         }
     }
 }

@@ -8,7 +8,9 @@ namespace TFOR_IOS
     public partial class BirdScreenController : UIViewController
     {
         public Site[] Sitesarr { get; set; }
+        public SiteModel SiteMod { get; set; } 
         public List<Sighting> Sightings { get; set; } = new List<Sighting>();
+        public ViewController root { get; set; }
 
         public BirdScreenController (IntPtr handle) : base (handle)
         {
@@ -17,23 +19,35 @@ namespace TFOR_IOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+<<<<<<< Updated upstream
             BASitePicker.Model = new SiteModel(Sitesarr);
             
 
+=======
+>>>>>>> Stashed changes
             SightingsAddButton.TouchUpInside += (Sender, e) => CreateSighting();
+            BASubmitButton.TouchUpInside += (Sender, e) => SubmitSurvey();
         }
 
         public override void ViewWillAppear(bool animated)
         {
+<<<<<<< Updated upstream
             SightingTableView.Source = new SightingsTableSource(Sightings);
             base.ViewWillAppear(animated);
+=======
+            base.ViewWillAppear(animated);
+
+            SiteMod = new SiteModel(Sitesarr);
+            BASitePicker.Model = SiteMod;
+
+            SightingTableView.Source = new SightingsTableSource(Sightings,this);
+>>>>>>> Stashed changes
         }
 
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
-            base.PrepareForSegue(segue, sender);
 
-            if(segue.Identifier == "AddBirdSegue")
+            if(segue.Identifier == "SightingSegue")
             {
                 var navctlr = segue.DestinationViewController as SightingDetailController;
                 if (navctlr != null)
@@ -76,6 +90,31 @@ namespace TFOR_IOS
             var detail = Storyboard.InstantiateViewController("detail") as SightingDetailController;
             detail.SetSighting(this, newsighting);
             NavigationController.PushViewController(detail, true);
+        }
+
+        public void EditSighting(Sighting editsighting)
+        {
+            var detail = Storyboard.InstantiateViewController("detail") as SightingDetailController;
+            detail.SetSighting(this, editsighting);
+            NavigationController.PushViewController(detail, true);
+        }
+
+        public void SubmitSurvey()
+        {
+
+            if((DateTime)BAStartTImePicker.Date > (DateTime)BAEndTimePicker.Date)
+            {
+                BASubmitButton.SetTitle("Invaild", UIControlState.Normal);
+            }
+            else
+            {
+                BASubmitButton.SetTitle("Submit", UIControlState.Normal);
+                var newSurvey = new BirdSurvey((DateTime)BADatePicker.Date, (DateTime)BAStartTImePicker.Date,
+                    (DateTime)BAEndTimePicker.Date, SiteMod.GetItem(SiteMod.Selectedindex), Sightings.ToArray(), BACommentText.Text);
+                
+                /*root.SubmitBirdSurvey(newSurvey);*/
+                this.NavigationController.PopViewController(true);
+            }
         }
     }
 }

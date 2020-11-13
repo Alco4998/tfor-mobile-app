@@ -6,7 +6,7 @@ namespace TFOR_IOS
     public class SiteModel : UIPickerViewModel
     {
         private Site[] Sites;
-        private int Selectedindex = 0;
+        public int Selectedindex = 0;
 
         public SiteModel(Site[] sites)
         {
@@ -32,6 +32,11 @@ namespace TFOR_IOS
         public override void Selected(UIPickerView picker, nint row, nint component)
         {
             Selectedindex = (int)row;
+        }
+
+        public Site GetItem(int id)
+        {
+            return Sites[id];
         }
     }
 }

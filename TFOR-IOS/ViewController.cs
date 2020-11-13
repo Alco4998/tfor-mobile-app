@@ -45,6 +45,7 @@ namespace TFOR_IOS
             if (nextControlller != null)
             {
                 nextControlller.Sitesarr = Siteslist.ToArray();
+                nextControlller.root = this;
             }
         }
 
@@ -81,15 +82,6 @@ namespace TFOR_IOS
                             {
                                 SiteReturn.Add(JsonConvert.DeserializeObject<Site>(item.ToString()));
                             }
-
-                            string teststring = "";
-
-                            foreach (Site site in SiteReturn)
-                            {
-                                teststring += string.Format("{0}\n", site.Name);
-                            }
-                            
-                            CreateAlert("Object", teststring);
                         }
                     }
                 }
@@ -109,6 +101,11 @@ namespace TFOR_IOS
             ViewController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 
             PresentViewController(ViewController, true, null);
+        }
+
+        public void SubmitBirdSurvey(BirdSurvey birdSurvey)
+        {
+            Console.WriteLine(birdSurvey.ToString());
         }
 
     }

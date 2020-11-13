@@ -50,6 +50,7 @@ namespace TFOR_IOS
 
             PresentViewController(ViewController, true, null);
         }
+
         private void SaveValidation()
         {
             int Amount;
