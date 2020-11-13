@@ -19,11 +19,16 @@ namespace TFOR_IOS
             base.ViewDidLoad();
             BASitePicker.Model = new SiteModel(Sitesarr);
             
-            SightingTableView.Source = new SightingsTableSource(Sightings);
 
             SightingsAddButton.TouchUpInside += (Sender, e) => CreateSighting();
         }
-        
+
+        public override void ViewWillAppear(bool animated)
+        {
+            SightingTableView.Source = new SightingsTableSource(Sightings);
+            base.ViewWillAppear(animated);
+        }
+
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
             base.PrepareForSegue(segue, sender);
