@@ -36,7 +36,7 @@ namespace TFOR_IOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton BASubmitButton { get; set; }
+        UIKit.UIButton BASurveyButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -45,10 +45,6 @@ namespace TFOR_IOS
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView SightingTableView { get; set; }
-
-        [Action ("BASubmitButton_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void BASubmitButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -77,9 +73,9 @@ namespace TFOR_IOS
                 BAStartTImePicker = null;
             }
 
-            if (BASubmitButton != null) {
-                BASubmitButton.Dispose ();
-                BASubmitButton = null;
+            if (BASurveyButton != null) {
+                BASurveyButton.Dispose ();
+                BASurveyButton = null;
             }
 
             if (SightingsAddButton != null) {

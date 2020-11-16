@@ -19,29 +19,18 @@ namespace TFOR_IOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-<<<<<<< Updated upstream
-            BASitePicker.Model = new SiteModel(Sitesarr);
-            
-
-=======
->>>>>>> Stashed changes
             SightingsAddButton.TouchUpInside += (Sender, e) => CreateSighting();
-            BASubmitButton.TouchUpInside += (Sender, e) => SubmitSurvey();
+            BASurveyButton.TouchUpInside += (Sender, e) => SubmitSurvey();
         }
 
         public override void ViewWillAppear(bool animated)
         {
-<<<<<<< Updated upstream
-            SightingTableView.Source = new SightingsTableSource(Sightings);
-            base.ViewWillAppear(animated);
-=======
             base.ViewWillAppear(animated);
 
             SiteMod = new SiteModel(Sitesarr);
             BASitePicker.Model = SiteMod;
 
             SightingTableView.Source = new SightingsTableSource(Sightings,this);
->>>>>>> Stashed changes
         }
 
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
@@ -102,17 +91,17 @@ namespace TFOR_IOS
         public void SubmitSurvey()
         {
 
-            if((DateTime)BAStartTImePicker.Date > (DateTime)BAEndTimePicker.Date)
+            if ((DateTime)BAStartTImePicker.Date > (DateTime)BAEndTimePicker.Date)
             {
-                BASubmitButton.SetTitle("Invaild", UIControlState.Normal);
+                BASurveyButton.SetTitle("Invaild", UIControlState.Normal);
             }
             else
             {
-                BASubmitButton.SetTitle("Submit", UIControlState.Normal);
+                BASurveyButton.SetTitle("Submit", UIControlState.Normal);
                 var newSurvey = new BirdSurvey((DateTime)BADatePicker.Date, (DateTime)BAStartTImePicker.Date,
                     (DateTime)BAEndTimePicker.Date, SiteMod.GetItem(SiteMod.Selectedindex), Sightings.ToArray(), BACommentText.Text);
-                
-                /*root.SubmitBirdSurvey(newSurvey);*/
+
+                root.SubmitBirdSurvey(newSurvey);
                 this.NavigationController.PopViewController(true);
             }
         }
