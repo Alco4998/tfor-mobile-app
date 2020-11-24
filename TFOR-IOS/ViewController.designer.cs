@@ -12,7 +12,7 @@ using UIKit;
 namespace TFOR_IOS
 {
     [Register ("ViewController")]
-    partial class ViewController
+    partial class MainMenuController
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]

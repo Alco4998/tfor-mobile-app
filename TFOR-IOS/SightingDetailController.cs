@@ -18,6 +18,7 @@ namespace TFOR_IOS
         {
             base.ViewWillAppear(animated);
 
+            //Set the name incase 
             SpeciesText.Text = currentSighting.Name;
             AmountText.Text = currentSighting.Amount.ToString();
         }
@@ -25,6 +26,7 @@ namespace TFOR_IOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
             SaveButton.TouchUpInside += (sender, e) =>
             {
                 SaveValidation();

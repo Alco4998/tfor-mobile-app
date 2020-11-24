@@ -150,6 +150,7 @@
     </Compile>
     <Compile Include="Site.cs" />
     <Compile Include="SiteModel.cs" />
+    <Compile Include="ServerServices.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -10,7 +10,7 @@ namespace TFOR_IOS
         public Site[] Sitesarr { get; set; }
         public SiteModel SiteMod { get; set; } 
         public List<Sighting> Sightings { get; set; } = new List<Sighting>();
-        public ViewController root { get; set; }
+        public MainMenuController root { get; set; }
 
         public BirdScreenController (IntPtr handle) : base (handle)
         {
@@ -93,7 +93,7 @@ namespace TFOR_IOS
 
             if ((DateTime)BAStartTImePicker.Date > (DateTime)BAEndTimePicker.Date)
             {
-                BASurveyButton.SetTitle("Invaild", UIControlState.Normal);
+                //CreateAlert("Invaild Form", "Start Time Cannot be before end time");
             }
             else
             {
@@ -101,7 +101,10 @@ namespace TFOR_IOS
                 var newSurvey = new BirdSurvey((DateTime)BADatePicker.Date, (DateTime)BAStartTImePicker.Date,
                     (DateTime)BAEndTimePicker.Date, SiteMod.GetItem(SiteMod.Selectedindex), Sightings.ToArray(), BACommentText.Text);
 
-                root.SubmitBirdSurvey(newSurvey);
+                ServerServices services = new ServerServices();
+
+                services.SubmitBirdSurvey(newSurvey);
+
                 this.NavigationController.PopViewController(true);
             }
         }
