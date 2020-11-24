@@ -58,16 +58,15 @@ namespace TFOR_IOS
             return SiteReturn;
         }
 
-        public string SubmitBirdSurvey(BirdSurvey birdSurvey)
+        public void SubmitBirdSurvey(BirdSurvey birdSurvey)
         {
             Uri uri = new Uri(BIRD_SURVEY_POST_URL);
             client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
             string json = JsonConvert.SerializeObject(birdSurvey);
 
-
             var returned = client.UploadString(uri, json);
 
-            return returned;
+            Console.WriteLine(returned);
         }
     }
 }

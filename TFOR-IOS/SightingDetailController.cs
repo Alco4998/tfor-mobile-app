@@ -56,11 +56,13 @@ namespace TFOR_IOS
         private void SaveValidation()
         {
             int Amount;
+            
+            bool NumberCorrect = int.TryParse(AmountText.Text, out Amount) && AmountText.Text != "0";
+            
             currentSighting.Name = SpeciesText.Text;
-            bool NumberCorrect = int.TryParse(AmountText.Text, out Amount);
             currentSighting.Amount = Amount;
 
-            if (!NumberCorrect)
+            if (!currentSighting.VaildForSighting())
             {
                 CreateAlert("Alert", "Amount was not a Valid Amount");
             }

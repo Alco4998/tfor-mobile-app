@@ -12,7 +12,7 @@ namespace TFOR_IOS
     {
         public DateTime Starttime { get; set; }
         public DateTime Endtime { get; set; }
-        //date would be here
+
         public int SiteId { get; set; }
         public Sighting[] BirdSightings { get; set; }
         public string Comments { get; set; }
@@ -35,6 +35,13 @@ namespace TFOR_IOS
             {
                 Comments = string.Empty;
             }
+        }
+
+        public bool VaildforBirdSurvey()
+        {
+            return this.Starttime < this.Endtime &&
+                   !(this.SiteId < 0) &&
+                   this.BirdSightings.Length >= 1;
         }
 
         public override string ToString()

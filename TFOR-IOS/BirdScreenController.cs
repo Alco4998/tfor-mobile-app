@@ -73,7 +73,7 @@ namespace TFOR_IOS
                 newId = Sightings[Sightings.Count - 1].Id + 1;
             }
             
-            var newsighting = new Sighting{Id = newId };
+            var newsighting = new Sighting(newId);
             Sightings.Add(newsighting);
 
             var detail = Storyboard.InstantiateViewController("detail") as SightingDetailController;
@@ -90,17 +90,11 @@ namespace TFOR_IOS
 
         public void SubmitSurvey()
         {
+            var newSurvey = new BirdSurvey((DateTime)BADatePicker.Date, (DateTime)BAStartTImePicker.Date,
+                (DateTime)BAEndTimePicker.Date, SiteMod.GetItem(SiteMod.Selectedindex), Sightings.ToArray(), BACommentText.Text);
 
-            if ((DateTime)BAStartTImePicker.Date > (DateTime)BAEndTimePicker.Date)
+            if (newSurvey.VaildforBirdSurvey())
             {
-                //CreateAlert("Invaild Form", "Start Time Cannot be before end time");
-            }
-            else
-            {
-                BASurveyButton.SetTitle("Submit", UIControlState.Normal);
-                var newSurvey = new BirdSurvey((DateTime)BADatePicker.Date, (DateTime)BAStartTImePicker.Date,
-                    (DateTime)BAEndTimePicker.Date, SiteMod.GetItem(SiteMod.Selectedindex), Sightings.ToArray(), BACommentText.Text);
-
                 ServerServices services = new ServerServices();
 
                 services.SubmitBirdSurvey(newSurvey);

@@ -36,7 +36,6 @@ namespace TFOR_IOS
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
-            // Release any cached data, images, etc that aren't in use.
         }
 
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
@@ -51,8 +50,6 @@ namespace TFOR_IOS
                 nextControlller.root = this;
             }
         }
-
-        
 
         private void CreateAlert(string Title, string Content)
         {

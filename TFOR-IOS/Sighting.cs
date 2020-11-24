@@ -14,11 +14,22 @@ namespace TFOR_IOS
         public string Name { get; set; }
         public int Amount { get; set; }
 
-        /*public Sighting(int id, string name, int amount)
+        private bool Intparse { get; set; }
+
+        public Sighting(int id) { Id = id; }
+
+        public Sighting(int id, string name, string amount)
         {
             Name = name;
-            Amount = amount;
-        }*/
+            Intparse = int.TryParse(
+                amount, out int ParsedAmount);
+            Amount = ParsedAmount;
+        }
+
+        public bool VaildForSighting()
+        {
+            return Intparse && Amount > 0 && Name != string.Empty;
+        }
 
         public override string ToString()
         {
