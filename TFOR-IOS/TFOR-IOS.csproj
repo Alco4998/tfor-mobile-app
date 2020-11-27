@@ -157,9 +157,7 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
@@ -198,10 +196,6 @@
     <Compile Include="MonitorScreenController.cs" />
     <Compile Include="MonitorScreenController.designer.cs">
       <DependentUpon>MonitorScreenController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SurveySubmitButton.cs" />
-    <Compile Include="SurveySubmitButton.designer.cs">
-      <DependentUpon>SurveySubmitButton.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

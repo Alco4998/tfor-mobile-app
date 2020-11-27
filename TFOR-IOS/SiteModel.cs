@@ -3,6 +3,9 @@ using UIKit;
 
 namespace TFOR_IOS
 {
+    /// <summary>
+    /// This is the Model that allows the Picker View to operate
+    /// </summary>
     public class SiteModel : UIPickerViewModel
     {
         private Site[] Sites;

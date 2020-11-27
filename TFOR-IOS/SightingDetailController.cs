@@ -18,7 +18,7 @@ namespace TFOR_IOS
         {
             base.ViewWillAppear(animated);
 
-            //Set the name incase 
+            ///sets the name and amount to current sighting selected incase Editing is taking place
             SpeciesText.Text = currentSighting.Name;
             AmountText.Text = currentSighting.Amount.ToString();
         }
@@ -27,18 +27,28 @@ namespace TFOR_IOS
         {
             base.ViewDidLoad();
 
+            ///Does Vaildation And save (if Vaild)
             SaveButton.TouchUpInside += (sender, e) =>
             {
                 SaveValidation();
             };
         }
-
+        /// <summary>
+        /// Sets the interaction between the parent screen and the currently selected item
+        /// </summary>
+        /// <param name="d">The part Bird screen Controller</param>
+        /// <param name="s">the current Sighting</param>
         public void SetSighting(BirdScreenController d, Sighting s)
         {
             Delegate = d;
             currentSighting = s;
         }
 
+        /// <summary>
+        /// Creates an Alert on screen when called
+        /// </summary>
+        /// <param name="Title">The Title of the Alerts</param>
+        /// <param name="Content">The content of the Alert</param>
         private void CreateAlert(string Title, string Content)
         {
             if (Title == null)
@@ -52,24 +62,12 @@ namespace TFOR_IOS
 
             PresentViewController(ViewController, true, null);
         }
-
+        
+        /// <summary>
+        /// Checkes to see if the Sighting is Vaild if so submits back to the parent controller
+        /// </summary>
         private void SaveValidation()
         {
-            if (currentSighting.Id > 0 && currentSighting.Name != string.Empty || currentSighting.Amount < 0)
-            {
-                currentSighting = new Sighting(currentSighting.Id, SpeciesText.Text, AmountText.Text);
-            }
-            else
-            {
-                int Amount;
-                int.TryParse(AmountText.Text, out Amount);
-
-                currentSighting.Name = SpeciesText.Text;
-                currentSighting.Amount = Amount;
-            }
-            
-            
-
             if (!currentSighting.VaildForSighting())
             {
                 CreateAlert("Alert", "Amount was not a Valid Amount");

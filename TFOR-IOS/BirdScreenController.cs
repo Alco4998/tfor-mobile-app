@@ -18,6 +18,7 @@ namespace TFOR_IOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
             SightingsAddButton.TouchUpInside += (Sender, e) => CreateSighting();
             BASurveyButton.TouchUpInside += (Sender, e) => SubmitSurvey();
         }
@@ -26,15 +27,20 @@ namespace TFOR_IOS
         {
             base.ViewWillAppear(animated);
 
+            ///Instatiates the required objects to make the Picker view work
             SiteMod = new SiteModel(Sitesarr);
             BASitePicker.Model = SiteMod;
 
+            //attaches the Sightings to a updated variation of the source
             SightingTableView.Source = new SightingsTableSource(Sightings,this);
         }
 
+        /// <summary>
+        /// Passes the necessary infomatation for creating or editing the Sighting
+        /// </summary>
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
-
+            
             if(segue.Identifier == "SightingSegue")
             {
                 var navctlr = segue.DestinationViewController as SightingDetailController;
@@ -52,12 +58,20 @@ namespace TFOR_IOS
             }
         }
 
+        /// <summary>
+        /// saves the infomation from the Survey
+        /// </summary>
+        /// <param name="sighting">This is the Sighting that will be saved</param>
         public void SaveSighting(Sighting sighting)
         {
             var oldSighting = Sightings.Find(t => t.Id == sighting.Id);
                 NavigationController.PopViewController(true);
         }
 
+        /// <summary>
+        /// Deletes the infomation from the Survey
+        /// </summary>
+        /// <param name="sighting">This is the Sighting that will be Deleted</param>
         public void DeleteSighting(Sighting sighting)
         {
             var oldSighting = Sightings.Find(t => t.Id == sighting.Id);
@@ -65,6 +79,9 @@ namespace TFOR_IOS
                 NavigationController.PopViewController(true);
         }
 
+        /// <summary>
+        /// Creates a Sighting before pushing new window to edit the newly created survey
+        /// </summary>
         public void CreateSighting()
         {
             int newId = 0;
@@ -81,6 +98,10 @@ namespace TFOR_IOS
             NavigationController.PushViewController(detail, true);
         }
 
+        /// <summary>
+        /// Passes the relevent infomation about the Survey input to be edited
+        /// </summary>
+        /// <param name="editsighting">This is the Sighting that will be Deleted</param>
         public void EditSighting(Sighting editsighting)
         {
             var detail = Storyboard.InstantiateViewController("detail") as SightingDetailController;
@@ -88,6 +109,12 @@ namespace TFOR_IOS
             NavigationController.PushViewController(detail, true);
         }
 
+        /// <summary>
+        /// if the Survey is vaild it
+        /// Packages up the infomation into Bird Survey object, That can then be Transformed into a API readable format and then Posts the API Readable format
+        /// and Goes back to the main menu
+        /// </summary>
+        
         public void SubmitSurvey()
         {
             var newSurvey = new BirdSurvey((DateTime)BADatePicker.Date, (DateTime)BAStartTImePicker.Date,

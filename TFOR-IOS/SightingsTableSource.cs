@@ -6,6 +6,9 @@ using UIKit;
 
 namespace TFOR_IOS
 {
+    /// <summary>
+    /// The source model for the Table view to understand
+    /// </summary>
     public class SightingsTableSource : UITableViewSource
     {
         List<Sighting> tableitems = new List<Sighting>();
@@ -16,19 +19,6 @@ namespace TFOR_IOS
         {
             tableitems = items;
             Delegate = b;
-        }
-
-        public override void CommitEditingStyle(UITableView tableView, UITableViewCellEditingStyle editingStyle, NSIndexPath indexPath)
-        {
-            switch (editingStyle)
-            {
-                case UITableViewCellEditingStyle.Delete:
-                    break;
-
-                case UITableViewCellEditingStyle.Insert:
-                    
-                    break;
-            }
         }
 
         public override nint RowsInSection(UITableView tableview, nint section)
@@ -60,7 +50,10 @@ namespace TFOR_IOS
         {
             return true;
         }
-
+        
+        /// <summary>
+        /// Creates the actions for the swipe left options
+        /// </summary>
         public override UITableViewRowAction[] EditActionsForRow(UITableView tableView, NSIndexPath indexPath)
         {
             UITableViewRowAction editButton = UITableViewRowAction.Create(

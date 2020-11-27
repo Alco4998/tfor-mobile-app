@@ -1,6 +1,9 @@
 ﻿using System;
 namespace TFOR_IOS
 {
+    /// <summary>
+    /// A Site object to easly manipulate the Id and database infomation for easy of understanding 
+    /// </summary>
     public class Site
     {
         public int    Id          { get; private set; }

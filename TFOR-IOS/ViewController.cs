@@ -17,8 +17,6 @@ namespace TFOR_IOS
     {
         public string Sites { get; private set; }
         public List<Site> Siteslist { get; set; }
-
-
         
         public MainMenuController(IntPtr handle) : base(handle)
         {
@@ -27,10 +25,11 @@ namespace TFOR_IOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
+            
+            ///Instatiates the required objects to make the Picker view work
             ServerServices services = new ServerServices();
-
             Siteslist = services.GetSites();
+
         }
 
         public override void DidReceiveMemoryWarning()
@@ -38,6 +37,7 @@ namespace TFOR_IOS
             base.DidReceiveMemoryWarning();
         }
 
+        ///PrepareForSegue is used to tranfer the Sites infomation to the relevant screen
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
             base.PrepareForSegue(segue, sender);
@@ -70,7 +70,12 @@ namespace TFOR_IOS
                 }
             }
         }
-
+        
+        /// <summary>
+        /// Creates an Alert on screen when called
+        /// </summary>
+        /// <param name="Title">The Title of the Alerts</param>
+        /// <param name="Content">The content of the Alert</param>
         private void CreateAlert(string Title, string Content)
         {
             if (Title == null)
@@ -83,17 +88,18 @@ namespace TFOR_IOS
             PresentViewController(ViewController, true, null);
         }
 
-        
-
+        /// <summary>
+        /// If there is an internet connection it will move between screens
+        /// </summary>
+        /// <returns>if Segue Idenifier is equal to any of the screens segue identifiers then move based on the internet connectivity</returns>
         public override bool ShouldPerformSegue(string segueIdentifier, NSObject sender)
         {
-            //bool IsConnected = Connectivity.NetworkAccess == NetworkAccess.Internet;
-            bool IsConnected = true;
+            bool IsConnected = Connectivity.NetworkAccess == NetworkAccess.Internet;
 
             switch (segueIdentifier)
             {
                 case "SurveySegue":
-                    return true;
+                    return IsConnected;
 
                 case "BirdSegue":
                     return IsConnected;
@@ -105,8 +111,6 @@ namespace TFOR_IOS
                     return true;
 
             }
-
-            //return base.ShouldPerformSegue(segueIdentifier, sender);
         }
     }
 }

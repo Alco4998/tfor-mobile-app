@@ -18,6 +18,7 @@ namespace TFOR_IOS
 
         public override void ViewWillAppear(bool animated)
         {
+			///Instatiates the required objects to make the Picker view work
 			siteModel = new SiteModel(Sitesarr);
 			MonitorSitePickerView.Model = siteModel;
 

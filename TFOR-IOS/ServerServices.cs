@@ -18,9 +18,15 @@ namespace TFOR_IOS
         {
         }
 
+        /// <summary>
+        /// Uses GET API to GET the infomation required to make a list Site objects
+        /// </summary>
+        /// <returns>
+        /// Returns a List of Site Objects
+        /// </returns>
+
         public List<Site> GetSites()
         {
-            
             Uri uri = new Uri(SITES_GET_URL);
             client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
 
@@ -58,6 +64,10 @@ namespace TFOR_IOS
             return SiteReturn;
         }
 
+        /// <summary>
+        /// POSTs the Content of the Bird Survey to the Database
+        /// </summary>
+        /// <param name="birdSurvey">An object formatted for the Submission</param>
         public void SubmitBirdSurvey(BirdSurvey birdSurvey)
         {
             Uri uri = new Uri(BIRD_SURVEY_POST_URL);

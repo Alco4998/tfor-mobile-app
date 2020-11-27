@@ -20,6 +20,7 @@ namespace TFOR_IOS
         {
 			base.ViewWillAppear(animated);
 
+			///Instatiates the required objects to make the Picker view work
 			SiteMod = new SiteModel(Sitesarr);
 			SSitePickerView.Model = SiteMod;
 
