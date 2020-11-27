@@ -117,19 +117,45 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 80x80.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 58x58.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 40x40-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 60x60-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 120x120-1.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\logo.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\.DS_Store" />
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcon-1.appiconset\logo 40x40.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcon-1.appiconset\.DS_Store" />
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcon-1.appiconset\logo 58x58-1.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\AppIcon-1.appiconset\logo 60x60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 80x80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 58x58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 40x40-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 60x60-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 120x120-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\logo.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\.DS_Store">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon-1.appiconset\logo 40x40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon-1.appiconset\.DS_Store">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon-1.appiconset\logo 58x58-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon-1.appiconset\logo 60x60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

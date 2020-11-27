@@ -20,7 +20,7 @@ namespace TFOR_IOS
 
         public List<Site> GetSites()
         {
-            //var request = HttpWebRequest.Create(SITES_GET_URL);
+            
             Uri uri = new Uri(SITES_GET_URL);
             client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
 

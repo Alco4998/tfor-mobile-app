@@ -35,6 +35,14 @@ namespace TFOR_IOS
             }
         }
 
+        ///<summary>
+        ///Returns if the Bird Survey is considered Vaild for submission to the database
+        ///</summary>
+        ///<returns>
+        ///Returns a boolean of End Time > Start Time 
+        ///and Site Id not Less the ones available
+        ///and there is a Bird sighting
+        /// </returns>
         public bool VaildforBirdSurvey()
         {
             return this.Starttime < this.Endtime &&
@@ -42,6 +50,9 @@ namespace TFOR_IOS
                    this.BirdSightings.Length >= 1;
         }
 
+        /// <summary>
+        /// Prints the infomation about it's self on a line by line 
+        /// </summary>
         public override string ToString()
         {
             return String.Format("{0}\n{1}\n{2}\n{3}\n{4}",Starttime,Endtime,SiteId,BirdSightings.Length.ToString(),Comments);
