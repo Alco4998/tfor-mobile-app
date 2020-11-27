@@ -10,7 +10,6 @@ namespace TFOR_IOS
         public Site[] Sitesarr { get; set; }
         public SiteModel SiteMod { get; set; } 
         public List<Sighting> Sightings { get; set; } = new List<Sighting>();
-        public MainMenuController root { get; set; }
 
         public BirdScreenController (IntPtr handle) : base (handle)
         {
@@ -39,6 +38,7 @@ namespace TFOR_IOS
             if(segue.Identifier == "SightingSegue")
             {
                 var navctlr = segue.DestinationViewController as SightingDetailController;
+
                 if (navctlr != null)
                 {
                     var table = SightingTableView;

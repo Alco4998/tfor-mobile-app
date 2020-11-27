@@ -20,11 +20,9 @@ namespace TFOR_IOS
         public BirdSurvey(DateTime date, DateTime startTime, DateTime endTime, Site site, Sighting[] sightings, string comments)
         {
             Starttime = new DateTime(date.Year, date.Month,date.Day, startTime.Hour, startTime.Minute,0);
-            
             Endtime = new DateTime(date.Year, date.Month, date.Day, endTime.Hour, endTime.Minute, 0);
-            
-            SiteId = site.Id;
 
+            SiteId = site.Id;
             BirdSightings = sightings;
 
             if (comments != "Comments")

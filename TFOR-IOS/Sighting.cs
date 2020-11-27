@@ -28,7 +28,7 @@ namespace TFOR_IOS
 
         public bool VaildForSighting()
         {
-            return Intparse && Amount > 0 && Name != string.Empty;
+            return Amount > 0 && Name != string.Empty;
         }
 
         public override string ToString()

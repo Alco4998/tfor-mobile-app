@@ -117,6 +117,19 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 80x80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 58x58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 40x40-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 60x60-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-1.appiconset\logo 120x120-1.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\logo.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\.DS_Store" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon-1.appiconset\logo 40x40.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon-1.appiconset\.DS_Store" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon-1.appiconset\logo 58x58-1.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon-1.appiconset\logo 60x60.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -152,6 +165,18 @@
     <Compile Include="Site.cs" />
     <Compile Include="SiteModel.cs" />
     <Compile Include="ServerServices.cs" />
+    <Compile Include="SurveyScreenController.cs" />
+    <Compile Include="SurveyScreenController.designer.cs">
+      <DependentUpon>SurveyScreenController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonitorScreenController.cs" />
+    <Compile Include="MonitorScreenController.designer.cs">
+      <DependentUpon>MonitorScreenController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SurveySubmitButton.cs" />
+    <Compile Include="SurveySubmitButton.designer.cs">
+      <DependentUpon>SurveySubmitButton.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -55,12 +55,20 @@ namespace TFOR_IOS
 
         private void SaveValidation()
         {
-            int Amount;
+            if (currentSighting.Id > 0 && currentSighting.Name != string.Empty || currentSighting.Amount < 0)
+            {
+                currentSighting = new Sighting(currentSighting.Id, SpeciesText.Text, AmountText.Text);
+            }
+            else
+            {
+                int Amount;
+                int.TryParse(AmountText.Text, out Amount);
+
+                currentSighting.Name = SpeciesText.Text;
+                currentSighting.Amount = Amount;
+            }
             
-            bool NumberCorrect = int.TryParse(AmountText.Text, out Amount) && AmountText.Text != "0";
             
-            currentSighting.Name = SpeciesText.Text;
-            currentSighting.Amount = Amount;
 
             if (!currentSighting.VaildForSighting())
             {

@@ -42,12 +42,32 @@ namespace TFOR_IOS
         {
             base.PrepareForSegue(segue, sender);
 
-            var nextControlller = segue.DestinationViewController as BirdScreenController;
-
-            if (nextControlller != null)
+            if (segue.Identifier == "BirdSegue")
             {
-                nextControlller.Sitesarr = Siteslist.ToArray();
-                nextControlller.root = this;
+                var nextControlller = segue.DestinationViewController as BirdScreenController;
+
+                if (nextControlller != null)
+                {
+                    nextControlller.Sitesarr = Siteslist.ToArray();
+                }
+            }
+            else if (segue.Identifier == "MonitorSegue")
+            {
+                var nextControlller = segue.DestinationViewController as MonitorScreenController;
+
+                if (nextControlller != null)
+                {
+                    nextControlller.Sitesarr = Siteslist.ToArray();
+                }
+            }
+            else if (segue.Identifier == "SurveySegue")
+            {
+                var nextControlller = segue.DestinationViewController as SurveyScreenController;
+
+                if (nextControlller != null)
+                {
+                    nextControlller.Sitesarr = Siteslist.ToArray();
+                }
             }
         }
 
@@ -67,21 +87,26 @@ namespace TFOR_IOS
 
         public override bool ShouldPerformSegue(string segueIdentifier, NSObject sender)
         {
-            bool IsConnected = Connectivity.NetworkAccess == NetworkAccess.Internet;
+            //bool IsConnected = Connectivity.NetworkAccess == NetworkAccess.Internet;
+            bool IsConnected = true;
 
             switch (segueIdentifier)
             {
                 case "SurveySegue":
-                    return IsConnected;
+                    return true;
 
                 case "BirdSegue":
                     return IsConnected;
 
                 case "MonitorSegue":
                     return IsConnected;
+
+                default:
+                    return true;
+
             }
 
-            return base.ShouldPerformSegue(segueIdentifier, sender);
+            //return base.ShouldPerformSegue(segueIdentifier, sender);
         }
     }
 }
